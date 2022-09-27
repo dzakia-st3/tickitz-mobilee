@@ -11,14 +11,14 @@ const Login = () => {
     const dispatch = useDispatch()
     const navigation = useNavigation();
     const [showPassword, setShowPassword] = useState(false);
-        
+
 
     const [formRegister, setFormRegister] = useState({
-        first_name:'',
-        last_name:'',
-        email:'',
-        password:'',
-        phone_number:'',
+        first_name: '',
+        last_name: '',
+        email: '',
+        password: '',
+        phone_number: '',
     })
 
     console.log(formRegister, 'cek data input')
@@ -43,7 +43,7 @@ const Login = () => {
         }
         else {
             navigation.navigate('Register')
-        }     
+        }
     }, [isRegister])
 
     return (
@@ -67,8 +67,8 @@ const Login = () => {
             </View>
             {/* <Formik onSubmit={handleLogin}>
                 <> */}
-                    <View>
-                <Text style={{ color: 'black', paddingVertical: 8}}>First Name</Text>
+            <View>
+                <Text style={{ color: 'black', paddingVertical: 8 }}>First Name</Text>
                 <TextInput
                     value={formRegister.first_name}
                     onChangeText={value => onInputChange(value, 'first_name')}
@@ -83,7 +83,7 @@ const Login = () => {
                     }} />
             </View>
             <View>
-                <Text style={{ color: 'black', paddingVertical: 8}}>Last Name</Text>
+                <Text style={{ color: 'black', paddingVertical: 8 }}>Last Name</Text>
                 <TextInput
                     value={formRegister.last_name}
                     onChangeText={value => onInputChange(value, 'last_name')}
@@ -98,7 +98,7 @@ const Login = () => {
                     }} />
             </View>
             <View>
-                <Text style={{ color: 'black', paddingVertical: 8}}>Phone Number</Text>
+                <Text style={{ color: 'black', paddingVertical: 8 }}>Phone Number</Text>
                 <TextInput
                     value={formRegister.phone_number}
                     onChangeText={value => onInputChange(value, 'phone_number')}
@@ -114,7 +114,7 @@ const Login = () => {
                     }} />
             </View>
             <View>
-                <Text style={{ color: 'black', paddingVertical: 8}}>Email</Text>
+                <Text style={{ color: 'black', paddingVertical: 8 }}>Email</Text>
                 <TextInput
                     value={formRegister.email}
                     onChangeText={value => onInputChange(value, 'email')}
@@ -131,34 +131,34 @@ const Login = () => {
                     }} />
             </View>
             <View>
-                <Text style={{ color: 'black', paddingVertical: 8}}>Password</Text>
+                <Text style={{ color: 'black', paddingVertical: 8 }}>Password</Text>
                 <View style={[{ marginBottom: 15 }]}>
-                    <View style = {[commonStyle.flexRow, {
+                    <View style={[commonStyle.flexRow, {
                         borderStyle: 'solid',
                         borderColor: 'rgba(222, 222, 222, 1)',
                         borderWidth: 1,
-                        borderRadius: 4, 
+                        borderRadius: 4,
                     }]}>
-                        <TextInput 
-                        value={formRegister.password}
-                        onChangeText={value => onInputChange(value, 'password')}
-                        placeholder = "Write your password" 
-                        style = {{ 
-                            paddingVertical: 7,
-                            paddingLeft: 10,
-                            flex: 1 
-                            }} 
-                            autoCapitalize='none' 
+                        <TextInput
+                            value={formRegister.password}
+                            onChangeText={value => onInputChange(value, 'password')}
+                            placeholder="Write your password"
+                            style={{
+                                paddingVertical: 7,
+                                paddingLeft: 10,
+                                flex: 1
+                            }}
+                            autoCapitalize='none'
                             secureTextEntry={showPassword ? false : true} />
                         <Text onPress={() => setShowPassword(!showPassword)} style={{ alignSelf: 'center', padding: 5, marginRight: 7 }}>{showPassword ? 'Hide' : 'Show'}</Text>
                     </View>
                 </View>
             </View>
-                {/* </>
+            {/* </>
             </Formik> */}
             <Pressable
                 onPress={handleRegister}
-                
+
                 style={{
                     borderRadius: 10,
                     marginVertical: 5,
@@ -178,9 +178,9 @@ const Login = () => {
             <View style={[commonStyle.flex, commonStyle.flexRow, commonStyle.flexCenter, { paddingVertical: 7 }]}>
                 <Text style={{ color: 'black' }}>Already have account ?</Text>
                 <Pressable>
-                    <Text 
-                    style={[commonStyle.textPurple]}
-                    onPress = {() => navigation.navigate('Login')}>Sign In</Text>
+                    <Text
+                        style={[commonStyle.textPurple]}
+                        onPress={() => navigation.navigate('Login')}>Sign In</Text>
                 </Pressable>
             </View>
         </View>
