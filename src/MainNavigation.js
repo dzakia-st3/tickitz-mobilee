@@ -11,7 +11,7 @@ const Drawer = createDrawerNavigator()
 const DrawerRoute = () => {
     return (
         <Drawer.Navigator initialRouteName="Landing" drawerContent={props => <CustomDrawer {...props} />} >
-            <Drawer.Screen name="Homes" component={HomeScreen} options={{ headerShown: false }} />
+            <Drawer.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
             <Drawer.Screen name="List Movie" component={ViewAllScreen} options={{ headerShown: false }} />
             <Drawer.Screen name="Order" component={OrderScreen} options={{ headerShown: false }} />
             <Drawer.Screen name="Setting" component={ProfilOrderScreen} options={{ headerShown: false }} />

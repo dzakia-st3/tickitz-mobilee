@@ -48,7 +48,7 @@ const UpComing = () => {
                         fontSize: 25,
                         fontStyle: 'bold'
                     }]}>Up Coming</Text>
-                <Pressable onPress={() => navigation.navigate('ViewAll')}>
+                <Pressable onPress={() => navigation.navigate('List Movie')}>
                     <Text style={
                         [commonStyle.textPurple, {
                             fontSize: 20,

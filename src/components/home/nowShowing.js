@@ -49,7 +49,7 @@ const NowShowing = () => {
                         fontSize: 25,
                         fontStyle: 'bold'
                     }]}>Now Showing</Text>
-                <Pressable onPress={() => navigation.navigate('ViewAll')}>
+                <Pressable onPress={() => navigation.navigate('List Movie')}>
                     <Text style={
                         [commonStyle.textPurple, {
                             fontSize: 20,
