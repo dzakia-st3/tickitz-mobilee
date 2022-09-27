@@ -2,7 +2,7 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import { HomeScreen, ViewAllScreen, LoginScreen, RegisterScreen, ForgotPassScreen, ConfirmNewPassScreen, DetailScreen, OrderScreen, ProfilOrderScreen } from "./screen";
+import { HomeScreen, ViewAllScreen, LoginScreen, RegisterScreen, ForgotPassScreen, ConfirmNewPassScreen, DetailScreen, OrderScreen, ProfilOrderScreen, TicketScreen, PaymentScreen } from "./screen";
 import CustomDrawer from "./components/customDrawer";
 
 const Drawer = createDrawerNavigator()
@@ -32,6 +32,8 @@ const MainNavigation = () => {
                 <Stack.Screen name="Detail" component={DetailScreen} options={{ headerShown: false }} />
                 <Stack.Screen name="ForgotPass" component={ForgotPassScreen} options={{ headerShown: false }} />
                 <Stack.Screen name="ConfirmNewPass" component={ConfirmNewPassScreen} options={{ headerShown: false }} />
+                <Stack.Screen name="Ticket" component={TicketScreen} options={{ headerShown: false }} />
+                <Stack.Screen name="Payment" component={PaymentScreen} options={{ headerShown: false }} />
             </Stack.Navigator>
         </NavigationContainer>
     )

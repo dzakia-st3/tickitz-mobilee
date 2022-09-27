@@ -1,8 +1,10 @@
+import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { Text, ScrollView, View, Pressable, Image } from 'react-native'
 import Line from '../../../helper/line'
 
 const orderHistory = () => {
+    const navigation = useNavigation()
     return (
         <ScrollView style={{
             marginHorizontal: 35,
@@ -48,6 +50,7 @@ const orderHistory = () => {
                         borderStyle: 'solid',
                         paddingVertical: 15,
                     }}
+                        onPress={() => navigation.navigate('Ticket')}
                         android_ripple={{ color: "white" }}>
                         <Text style={{
                             color: 'white',

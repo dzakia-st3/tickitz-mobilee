@@ -4,6 +4,8 @@ import { LoginScreen, RegisterScreen, ForgotPassScreen, ConfirmNewPassScreen } f
 import DetailScreen from './DetailScreen'
 import OrderScreen from './OrderScreen'
 import ProfilOrderScreen from './ProfilOrder'
+import TicketScreen from './TicketScreen'
+import PaymentScreen from './PaymentScreen'
 
 export {
     HomeScreen,
@@ -14,5 +16,7 @@ export {
     ConfirmNewPassScreen,
     DetailScreen,
     OrderScreen,
-    ProfilOrderScreen
+    ProfilOrderScreen,
+    TicketScreen,
+    PaymentScreen
 }
