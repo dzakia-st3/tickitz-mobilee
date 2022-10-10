@@ -6,7 +6,6 @@ import { FlatList } from "react-native-gesture-handler";
 import {URL_BE} from "react-native-dotenv";
 
 const Schedule = ({ id }) => {
-    console.log(id, 'cek id di schedule, comp')
     const idMovie = id
     const [loading, setLoading] = useState(false)
     const [refetch, setRefetch] = useState(false)
@@ -19,8 +18,6 @@ const Schedule = ({ id }) => {
     useEffect(() => {
         axios.get(`${URL_BE}/api/v1/schedule/${idMovie}`).then((res) => {
             setDataSchedule(res.data)
-            console.log(dataSchedule, 'cek isi Schedule di axios')
-            console.log(idMovie, 'cek id di axios')
         }).catch((err) => {
             console.log(err, 'error')
         }).finally(() => {
@@ -33,7 +30,6 @@ const Schedule = ({ id }) => {
 
     return (
         <ScrollView>
-            {console.log(Schedule, 'cek isi schedule dapat atau engga')}
             <View>
                 <Text>Ini Search</Text>
 

@@ -7,12 +7,12 @@ import Line from "../../../helper/line"
 const Order = () => {
     const navigation = useNavigation()
     return (
-        <ScrollView style={{
+        <View style={{
             marginHorizontal: 35,
             marginVertical: 30,
         }}>
             <View style={{
-                display: 'flex'
+                display: 'flex',
             }}>
                 <Text style={{
                     fontSize: 23,
@@ -95,7 +95,7 @@ const Order = () => {
                             }}>C3, C4, C5</Text>
                         </View>
                     </View>
-                    <Line/>
+                    <Line />
                     <View style={{
                         display: 'flex',
                         flexDirection: 'row',
@@ -130,7 +130,7 @@ const Order = () => {
                     textAlign: 'center'
                 }}>Checkout Now</Text>
             </Pressable>
-        </ScrollView>
+        </View>
     )
 }
 

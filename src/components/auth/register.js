@@ -7,7 +7,6 @@ import { AuthRegister } from '../../redux/actions/auth'
 
 const Login = () => {
     const { data, error, loading, isRegister } = useSelector((state) => state.authRegister)
-    console.log(data, 'cek data regist')
     const dispatch = useDispatch()
     const navigation = useNavigation();
     const [showPassword, setShowPassword] = useState(false);
@@ -21,8 +20,6 @@ const Login = () => {
         phone_number: '',
     })
 
-    console.log(formRegister, 'cek data input')
-
     const onInputChange = (value, input) => {
         setFormRegister({
             ...formRegister,
@@ -33,7 +30,6 @@ const Login = () => {
     const handleRegister = (e) => {
         e.preventDefault()
         dispatch(AuthRegister(formRegister))
-        console.log(formRegister, 'data di handle')
     }
 
     useEffect(() => {

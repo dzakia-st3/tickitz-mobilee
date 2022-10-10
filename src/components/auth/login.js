@@ -8,18 +8,14 @@ import { Formik } from 'formik'
 
 const Login = () => {
     const { data, error, loading, isLogin } = useSelector((state) => state.auth)
-    console.log(data, 'cek data login')
     const dispatch = useDispatch()
     const navigation = useNavigation();
     const [showPassword, setShowPassword] = useState(false);
-    
-    console.log(data, 'cek data login')
     
     const [formLogin, setFormLogin] = useState({
         email: '',
         password: '',
     })
-    console.log(formLogin, 'cek data input')
 
     const onInputChange = (value, input) => {
         setFormLogin({
@@ -31,7 +27,6 @@ const Login = () => {
     const handleLogin = (e) => {
         e.preventDefault()
         dispatch(AuthLogin(formLogin))
-        console.log(formLogin, 'data di handle')
     }
 
     useEffect(() => {

@@ -39,7 +39,6 @@ const ViewAll = () => {
 
     useEffect(() => {
         const {title, page, limit} = query
-        console.log(title)
         setDataMovie((prevState) => ({
             ...prevState,
             loading: true
@@ -47,7 +46,6 @@ const ViewAll = () => {
         setLoading(true);
         axios.get(`${URL_BE}/api/v1/movie?${title ? `title=${title}`:``}${page ? `&page=${page}`:``}${limit ? `&limit=${limit}`:``}`).then((res) => {
             setDataMovie(res.data.data)
-            console.log(data, 'cek data movie')
         }).catch((err) => {
             console.log(err, 'error')
         }).finally(() => {

@@ -8,7 +8,6 @@ import {URL_BE} from "react-native-dotenv";
 
 
 const NowShowing = () => {
-    console.log(URL_BE, 'cek URL')
     const [loading, setLoading] = useState(false)
     const [refetch, setRefetch] = useState(false)
     const navigation = useNavigation();
@@ -27,7 +26,6 @@ const NowShowing = () => {
         setLoading(true);
         axios.get(`${URL_BE}/api/v1/movie`).then((res) => {
             setDataMovie(res.data.data)
-            console.log(data, 'cek data movie')
         }).catch((err) => {
             console.log(err, 'error')
         }).finally(() => {

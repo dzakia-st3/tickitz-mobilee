@@ -8,7 +8,6 @@ import {URL_BE} from "react-native-dotenv";
 import { FlatList } from "react-native-gesture-handler";
 
 const DetailMovie = ({ id }) => {
-    console.log(URL_BE, 'cek isi nya eiii, comp')
     const idMovie = id
     const [loading, setLoading] = useState(false)
     const [refetch, setRefetch] = useState(false)
@@ -21,8 +20,6 @@ const DetailMovie = ({ id }) => {
     useEffect(() => {
         axios.get(`${URL_BE}/api/v1/movie/${idMovie}`).then((res) => {
             setDataMovie(res.data)
-            console.log(dataMovie, 'cek isi movie di axios')
-            console.log(idMovie, 'cek id di axios')
         }).catch((err) => {
             console.log(err, 'error')
         }).finally(() => {
@@ -34,8 +31,6 @@ const DetailMovie = ({ id }) => {
 
     return (
         <>
-            {console.log(movie, 'cek isi data dapet atau engga')}
-
             <View
                 style={{
                     backgroundColor: 'white',

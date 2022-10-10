@@ -22,7 +22,6 @@ const LoginError = (error) => {
 }
 
 export const AuthLogin = (formData) => {
-    console.log(formData, 'data di action')
     return async (dispatch) => {
         dispatch(LoginRequest())
         await axios({ 
@@ -35,10 +34,8 @@ export const AuthLogin = (formData) => {
         })
         .then ((res) => {
             dispatch(LoginSucces(res.data.data))
-            console.log(res.data.data, 'masuk nggak datanya')
         })
         .catch((err)=> {
-            console.log(err, 'ini error')
             dispatch(LoginError(err.response.data))
         })
     }
@@ -72,7 +69,6 @@ const RegisterError = (error) => {
 }
 
 export const AuthRegister = (formData) => {
-    console.log(formData, 'data register di action')
     return async (dispatch) => {
         dispatch(RegisterRequest())
         await axios({
@@ -87,7 +83,6 @@ export const AuthRegister = (formData) => {
         })
         .then ((res) => {
             dispatch(RegisterSuccess(res.data))
-            console.log(formData, 'ini data form register ')
         })
         .catch((error)=> {
             dispatch(RegisterError(error.response.data))

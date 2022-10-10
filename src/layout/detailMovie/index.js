@@ -4,7 +4,6 @@ import { DetailMovie, Schedule } from "../../components/detail";
 import { ScrollView } from "react-native";
 
 const DetailMovieLayout = ({id}) => {
-    console.log(id, 'cek isi nya eiii, layout')
     return (
         <Layout>
             <ScrollView>

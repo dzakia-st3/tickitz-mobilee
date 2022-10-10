@@ -25,7 +25,6 @@ const UpComing = () => {
         setLoading(true);
         axios.get(`${URL_BE}/api/v1/movie`).then ((res) => {
             setDataMovie(res.data.data)
-            console.log(data, 'cek data movie')
         }).catch((err) => {
             console.log(err, 'error')
         }).finally(() => {
@@ -106,7 +105,6 @@ const UpComing = () => {
                             <Pressable 
                             onPress={() => {
                                 navigation.navigate("Detail", {id:item.id})
-                                console.log(item.id, 'cek id di homeee oiii')
                             }} 
                            
                             style={{ 
